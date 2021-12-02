@@ -10,8 +10,44 @@ body {
 
 p {
 	color: black;
-
 }
+
+a {
+	text-decoration: none;
+	cursor: alias;
+}
+
+
+
+
+
+/*------------- Parent et child (pour cacher les barres) -------------*/
+
+#parent {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+}
+
+
+#child {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+/*------------- Le carré -------------*/
+
 
 .carre {
 	background-color: red;
@@ -21,6 +57,57 @@ p {
 	padding: 10px;
 }
 
+.carre:hover {
+	animation-name: tourne;
+	animation-duration: 2s;
+}
+
+
+
+
+
+/*------------- Le texte qui tremble -------------*/
+
+
+.brille {
+	color: whitesmoke;
+	transition: 0.5s;
+	text-decoration: none;
+}
+
+.brille:hover {
+	animation: none;
+	color: white;
+	text-shadow:0px 0px 6px white,
+				0px 0px 2px white,
+				0px 0px 5px white,
+				-4px -1px 3px red,
+				2px -3px 3px greenyellow,
+				0px 8px 3px blue;
+	animation-name: tremble;
+	animation-duration: 0.3s;			
+	animation-iteration-count: infinite;
+}
+
+
+
+
+
+/*------------- Autres artifices -------------*/
+
+
+#saut {
+	margin-top: 700px;
+	margin-bottom: 700px;
+}
+
+#grand {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
+
+
 
 
 
@@ -28,9 +115,8 @@ p {
 /*------------- Sélection -------------*/
 
 ::selection {
-	background-color: hotpink;
-	opacity: 0.78;
-	color: white;
+	background-color: rgba(255, 255, 255, 0.9);
+	color: rgba(0, 0, 0, 0.85);
 }
 
 
@@ -46,7 +132,11 @@ p {
 	100% {transform: translate(0) rotate(0) scale(1);}
 }
 
-.carre:hover {
-	animation-name: tourne;
-	animation-duration: 2s;	
+
+@keyframes tremble {
+	8% {transform: translate(-3px, -7px);}
+	34% {transform: translate(0px, 7px);}
+	60% {transform: translate(16px, 2px);}
+	90% {transform: translate(-7px, -12px);}
+	100%{transform: translate(0px, 0px);}
 }

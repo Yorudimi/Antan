@@ -9,7 +9,7 @@ body {
 }
 
 p {
-	color: black;
+	color: white;
 }
 
 a {
@@ -21,24 +21,17 @@ a {
 
 
 
-/*------------- Parent et child (pour cacher les barres) -------------*/
 
-#parent {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+/* ----------- Scrollbar -------------*/
+
+#scroll {
 	position: fixed;
+	right: 10px;
 }
 
-
-#child {
-	width: 100%;
-	height: 100%;
-	overflow-y: scroll;
-	padding-right: 20px;
-    padding-bottom: 20px;
+::-webkit-scrollbar {
+    display: none;
 }
-
 
 
 
@@ -73,6 +66,8 @@ a {
 	color: whitesmoke;
 	transition: 0.5s;
 	text-decoration: none;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 
 .brille:hover {
@@ -91,32 +86,11 @@ a {
 
 
 
-
-
-/*------------- Autres artifices -------------*/
-
-
-#saut {
-	margin-top: 700px;
-	margin-bottom: 700px;
-}
-
-#grand {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	
-}
-
-
-
-
-
-
 /*------------- Sélection -------------*/
 
 ::selection {
-	background-color: rgba(255, 255, 255, 0.9);
-	color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.85);
 }
 
 
@@ -139,4 +113,23 @@ a {
 	60% {transform: translate(16px, 2px);}
 	90% {transform: translate(-7px, -12px);}
 	100%{transform: translate(0px, 0px);}
+}
+
+
+
+
+
+
+/*------------- Autres artifices -------------*/
+
+
+#saut {
+	margin-top: 700px;
+	margin-bottom: 700px;
+}
+
+#grand {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
 }

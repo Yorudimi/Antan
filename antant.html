@@ -22,6 +22,8 @@
 
 		<p id="scroll"><-</p>
 
+		<p id="plusoumoins">+ ou -</p>
+
 		<div class="brille">
 			<p>You, a few seconds agow</p>
 		</div>
@@ -48,7 +50,7 @@
 	let cursorPos = 0;
 
 	document.addEventListener('scroll', () => {
-		cursorPos = window.scrollY - (window.scrollY)**1/7;
+		cursorPos = window.scrollY - (window.scrollY)**1/18;
 		document.getElementById('scroll').style = "top:" + cursorPos + "px";
 	
 	});
